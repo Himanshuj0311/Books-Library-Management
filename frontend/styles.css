@@ -136,3 +136,53 @@ body {
     background-color: #0056b3;
   }
   
+  @media screen and (max-width: 600px) {
+    body {
+      margin: 10px;
+    }
+  
+    #book-list {
+      flex-direction: column;
+      gap: 16px;
+      padding: 10px;
+    }
+  
+    .book-item-crad {
+      max-width: 100%;
+      padding: 16px;
+      margin: 16px 0;
+    }
+  
+    .book-item-crad h3 {
+      font-size: 18px;
+    }
+  
+    .book-item-crad p {
+      font-size: 14px;
+    }
+  
+    .book-item-crad button {
+      font-size: 13px;
+      padding: 8px 12px;
+      margin-top: 12px;
+    }
+  
+    .popup {
+      width: 95%;
+      padding: 16px;
+    }
+  
+    .popup-content h2 {
+      font-size: 20px;
+    }
+  
+    .popup-content p {
+      font-size: 14px;
+    }
+  
+    .popup-content button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+  

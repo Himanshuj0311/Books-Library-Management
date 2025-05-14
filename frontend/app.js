@@ -131,3 +131,24 @@ document.getElementById('genre-filter').addEventListener('change', () => {
     }
   }
   
+  function deletBook(bookId) {
+    const confirmDelete = confirm("Are you sure you want to delete this book?");
+    if (!confirmDelete) return;
+  
+    fetch(`http://localhost:3000/api/books/${bookId}`, {
+      method: 'DELETE'
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Failed to delete book');
+      }
+      // Remove the deleted book from the array
+      allBooks = allBooks.filter(book => book.id !== bookId);
+      renderBooks(); // Re-render the list
+    })
+    .catch(err => {
+      console.error('Error deleting book:', err);
+      alert('Failed to delete the book.');
+    });
+  }
+  
