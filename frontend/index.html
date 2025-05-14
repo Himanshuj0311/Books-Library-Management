@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Library</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <h1 style="text-align: center;">📚 Books Library</h1>
+
+ 
+  <div style="text-align: center; margin-bottom: 20px;">
+    <input type="text" id="search-input" placeholder="Search by title or author..." style="padding: 8px; width: 240px;" />
+    <select id="genre-filter" style="padding: 8px;">
+      <option value="">All Genres</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Non-fiction">Non-fiction</option>
+      <option value="Science">Science</option>
+      <option value="History">History</option>
+      
+    </select>
+  </div>
+
+  
+  <div id="book-list">Loading books...</div>
+
+ 
+  <div id="pagination-controls" style="text-align: center; margin-top: 20px;">
+    <button onclick="prevPage()" style="padding: 8px 12px;">⬅ Prev</button>
+    <span id="page-info" style="margin: 0 15px;"></span>
+    <button onclick="nextPage()" style="padding: 8px 12px;">Next ➡</button>
+  </div>
+
+
+  <script src="./app.js"></script>
+</body>
+</html>
